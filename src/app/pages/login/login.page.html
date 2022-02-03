@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="contenedor">
+    <ion-grid>
+      <ion-card style="padding: 5em; border-radius: 1em;">
+        
+      
+
+      <ion-row class="ion-padding-bottom ion-text-center">
+        <ion-title>
+          Iniciar sesión
+        </ion-title>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-icon slot="end" name="person-outline"></ion-icon>
+            <ion-label position="floating" style="opacity: 45% !important">
+              Usuario/Correo Electronico
+            </ion-label>
+            <ion-input type="text" id="name"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-icon slot="end" name="lock-closed-outline"></ion-icon>
+            <ion-label position="floating" style="opacity: 45% !important">
+              Contraseña
+            </ion-label>
+            <ion-input type="password" id="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+
+        <ion-col size="12">
+          <ion-button size="block" (click)="iniciarSesion()">
+            Iniciar sesión
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    </ion-grid>
+  </div>
+
+</ion-content>

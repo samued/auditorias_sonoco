@@ -1,0 +1,7 @@
+{
+  "name": "auditorias_sonoco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
