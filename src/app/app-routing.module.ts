@@ -13,6 +13,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
 
+  
+  {
+    path: 'auditoria',
+    loadChildren: () => import('./pages/auditoria/auditoria.module').then( m => m.AuditoriaPageModule)
+  },
+
   {
     path: '**',
     redirectTo: 'home',

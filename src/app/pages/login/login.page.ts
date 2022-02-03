@@ -16,7 +16,7 @@ export class LoginPage implements OnInit {
   }
 
   iniciarSesion(){
-    this.servicioRutas.navegar('home');  
+    this.servicioRutas.navegar('auditoria');  
   }
 
 }
