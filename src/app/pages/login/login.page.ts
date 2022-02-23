@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteService } from 'src/app/shared/services/route.service';
-import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +9,32 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 })
 export class LoginPage implements OnInit {
 
+  formulario: FormGroup;
 
-  constructor(private servicioRutas: RouteService, ) { }
+  constructor(
+    private servicioRutas: RouteService,
+    private formBuilder: FormBuilder
+  ) {
+
+  }
 
   ngOnInit() {
+    this.construirFormulario();
   }
 
-  iniciarSesion(){
-    this.servicioRutas.navegar('auditoria');
+  construirFormulario(){
+    this.formulario = this.formBuilder.group({
+      email: [
+        null,
+        Validators.email,
+        Validators.required,
+      ],
+      contraseña: [null, Validators.required],
+    });
   }
 
+  iniciarSesion() {
+    console.log(this.formulario.value);
+    /* this.servicioRutas.navegar('auditoria'); */
+  }
 }
