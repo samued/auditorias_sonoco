@@ -22,12 +22,14 @@ export class LoginPage implements OnInit {
     this.construirFormulario();
   }
 
-  construirFormulario(){
+  construirFormulario() {
     this.formulario = this.formBuilder.group({
       email: [
         null,
-        Validators.email,
-        Validators.required,
+        Validators.compose([
+          Validators.email,
+          Validators.required,
+        ]),
       ],
       contraseña: [null, Validators.required],
     });
@@ -35,6 +37,6 @@ export class LoginPage implements OnInit {
 
   iniciarSesion() {
     console.log(this.formulario.value);
-    /* this.servicioRutas.navegar('auditoria'); */
+    this.servicioRutas.navegar('auditoria');
   }
 }
