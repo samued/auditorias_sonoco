@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteService } from 'src/app/shared/services/route.service';
 
 @Component({
   selector: 'app-auditoria',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuditoriaPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private servicioRutas: RouteService,
+
+  ) { }
 
   ngOnInit() {
   }
+
+  Molino(){
+    this.servicioRutas.navegar('molino')
+  }
+  ICD(){
+    this.servicioRutas.navegar('icd')
+  }
+
 
 }

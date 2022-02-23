@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteService } from 'src/app/shared/services/route.service';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,15 +9,14 @@ import { RouteService } from 'src/app/shared/services/route.service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(
-    private servicioRutas: RouteService,
-  ) { }
+
+  constructor(private servicioRutas: RouteService, ) { }
 
   ngOnInit() {
   }
 
   iniciarSesion(){
-    this.servicioRutas.navegar('auditoria');  
+    this.servicioRutas.navegar('auditoria');
   }
 
 }
